@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('issueTracker.projects', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/projects', {
     templateUrl: 'app/projects/projects.html',
-    controller: 'View2Ctrl'
+    controller: 'Projects'
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('Projects', [function() {
 
 }]);

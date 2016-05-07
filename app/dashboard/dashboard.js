@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('issueTracker.dashboard', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/dashboard', {
     templateUrl: 'app/dashboard/dashboard.html',
-    controller: 'View1Ctrl'
+    controller: 'Dashboard'
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('Dashdoard', [function() {
 
 }]);
