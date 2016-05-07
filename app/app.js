@@ -4,7 +4,6 @@
 angular.module('issueTracker', [
   'ngRoute',
   'issueTracker.home',
-  'issueTracker.dashboard',
   'issueTracker.projects'
 ]).
 config(['$routeProvider', function($routeProvider) {
