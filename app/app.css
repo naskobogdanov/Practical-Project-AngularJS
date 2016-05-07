@@ -32,3 +32,8 @@ body {
   content: "";
   padding: 0;
 }
+
+.form-signin, .form-horizontal {
+  max-width: 300px;
+  margin: 0 auto;
+}

@@ -10,5 +10,5 @@ angular.module('issueTracker.home', ['ngRoute'])
     }])
 
     .controller('HomeController', ['$scope', function($scope) {
-        $scope.hello = 'Aloha'
+        $scope.hello = 'SoftUni Issue Tracker'
     }]);
