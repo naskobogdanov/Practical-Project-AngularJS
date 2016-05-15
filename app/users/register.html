@@ -1,11 +1,11 @@
-<form class="form-horizontal" method="post" action="#">
+<form class="form-horizontal" method="post" action="#" name="registerUserForm">
 
     <div class="form-group">
         <label for="email" class="cols-sm-2 control-label">Your Email</label>
         <div class="cols-sm-10">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email">
+                <input type="email" required="required" ng-model="registerUser.email" class="form-control" name="email" id="email" placeholder="Enter your Email">
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
         <div class="cols-sm-10">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password">
+                <input type="password" required="required" ng-model="registerUser.password" class="form-control" name="password" id="password" placeholder="Enter your Password">
             </div>
         </div>
     </div>
@@ -25,13 +25,13 @@
         <div class="cols-sm-10">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password">
+                <input type="password" required="required" ng-model="registerUser.confirmPassword" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password">
             </div>
         </div>
     </div>
 
     <div class="form-group ">
-        <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+        <button type="button" ng-disabled="registerUserForm.$invalid || registerUser.password != registerUser.confirmPassword" ng-click="register(registerUser)" class="btn btn-primary btn-lg btn-block login-button">Register</button>
     </div>
     <div class="login-register">
         <a href="#/login">Login</a>
